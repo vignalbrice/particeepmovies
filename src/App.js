@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/styles/scss/app.scss";
+import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./views/Home";
+import storeConf from "./store";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 function App() {
+  // Récupère le store destructuré depuis l'objet storeConf et la variable persistor
+  const { store, persistor } = storeConf;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Navbar />
+        <Home />
+        <Footer />
+      </PersistGate>
+    </Provider>
   );
 }
 
