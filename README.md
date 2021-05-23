@@ -15,7 +15,7 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [particeepmovies.herokuapp.com](particeepmovies.herokuapp.com) to view it in the browser online!.
+Open [https://particeepmovies.herokuapp.com/](https://particeepmovies.herokuapp.com/) to view it in the browser online!.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
